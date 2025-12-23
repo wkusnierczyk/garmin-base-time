@@ -1,0 +1,27 @@
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <setting propertyKey="@Properties.ShowStandardTime" title="@Strings.StandardTimeMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.NumberSystem" title="@Strings.NumberSystemMenuTitle">
+        <settingConfig type="list">
+            <listEntry value="2">@Strings.Binary</listEntry>
+            <listEntry value="3">@Strings.Ternary</listEntry>
+            <listEntry value="4">@Strings.Quaternary</listEntry>
+            <listEntry value="5">@Strings.Quinary</listEntry>
+            <listEntry value="6">@Strings.Senary</listEntry>
+            <listEntry value="7">@Strings.Septenary</listEntry>
+            <listEntry value="8">@Strings.Octal</listEntry> 
+            <listEntry value="9">@Strings.Nonary</listEntry>
+            <listEntry value="10">@Strings.Decimal</listEntry>
+            <listEntry value="11">@Strings.Undecimal</listEntry>
+            <listEntry value="12">@Strings.Duodecimal</listEntry>
+            <listEntry value="13">@Strings.Tridecimal</listEntry>
+            <listEntry value="14">@Strings.Tetradecimal</listEntry>
+            <listEntry value="15">@Strings.Pentadecimal</listEntry>
+            <listEntry value="16">@Strings.Hexadecimal</listEntry>
+        </settingConfig>
+    </setting>
+
+</settings>

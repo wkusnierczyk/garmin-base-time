@@ -1,0 +1,293 @@
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <jsonData id="BaseTimeTests">[
+    
+        {
+            "name": "binary 0:00",
+            "base": 2,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": "    0", "minutes": "000000"}
+        },
+        {
+            "name": "binary 2:20",
+            "base": 2,
+            "time": {"hour": 2, "minutes": 20},
+            "expected": {"hour": "   10", "minutes": "010100"}
+        },
+        {
+            "name": "binary 23:59",
+            "base": 2,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "10111", "minutes": "111011"}
+        },
+
+        {
+            "name": "ternary 0:00",
+            "base": 3,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": "  0", "minutes": "0000"}
+        },
+        {
+            "name": "ternary 3:20",
+            "base": 3,
+            "time": {"hour": 3, "minutes": 20},
+            "expected": {"hour": " 10", "minutes": "0202"}
+        },
+        {
+            "name": "ternary 23:59",
+            "base": 3,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "212", "minutes": "2012"}
+        },
+
+        {
+            "name": "quaternary 0:00",
+            "base": 4,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": "  0", "minutes": "000"}
+        },
+        {
+            "name": "quaternary 4:20",
+            "base": 4,
+            "time": {"hour": 4, "minutes": 20},
+            "expected": {"hour": " 10", "minutes": "110"}
+        },
+        {
+            "name": "quaternary 23:59",
+            "base": 4,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "113", "minutes": "323"}
+        },
+
+        {
+            "name": "quinary 0:00",
+            "base": 5,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "000"}
+        },
+        {
+            "name": "quinary 5:20",
+            "base": 5,
+            "time": {"hour": 5, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "040"}
+        },
+        {
+            "name": "quinary 23:59",
+            "base": 5,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "43", "minutes": "214"}
+        },
+
+        {
+            "name": "senary 0:00",
+            "base": 6,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "000"}
+        },
+        {
+            "name": "senary 6:20",
+            "base": 6,
+            "time": {"hour": 6, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "032"}
+        },
+        {
+            "name": "senary 23:59",
+            "base": 6,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "35", "minutes": "135"}
+        },
+
+        {
+            "name": "septenary 0:00",
+            "base": 7,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "000"}
+        },
+        {
+            "name": "septenary 7:20",
+            "base": 7,
+            "time": {"hour": 7, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "026"}
+        },
+        {
+            "name": "septenary 23:59",
+            "base": 7,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "32", "minutes": "113"}
+        },
+
+        {
+            "name": "octal 0:00",
+            "base": 8,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "octal 8:20",
+            "base": 8,
+            "time": {"hour": 8, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "24"}
+        },
+        {
+            "name": "octal 23:59",
+            "base": 8,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "27", "minutes": "73"}
+        },
+
+        {
+            "name": "nonary 0:00",
+            "base": 9,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "nonary 9:20",
+            "base": 9,
+            "time": {"hour": 9, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "22"}
+        },
+        {
+            "name": "nonary 23:59",
+            "base": 9,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "25", "minutes": "65"}
+        },
+
+        {
+            "name": "decimal 0:00",
+            "base": 10,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "decimal 10:20",
+            "base": 10,
+            "time": {"hour": 10, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "20"}
+        },
+        {
+            "name": "decimal 23:59",
+            "base": 10,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "23", "minutes": "59"}
+        },
+
+        {
+            "name": "undecimal 0:00",
+            "base": 11,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "undecimal 11:20",
+            "base": 11,
+            "time": {"hour": 11, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "19"}
+        },
+        {
+            "name": "undecimal 23:59",
+            "base": 11,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "21", "minutes": "54"}
+        },
+
+        {
+            "name": "duodecimal 0:00",
+            "base": 12,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "duoedecimal 5:20",
+            "base": 12,
+            "time": {"hour": 12, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "18"}
+        },
+        {
+            "name": "duodecimal 23:59",
+            "base": 12,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "1B", "minutes": "4B"}
+        },
+
+        {
+            "name": "tridecimal 0:00",
+            "base": 12,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "tridecimal 5:20",
+            "base": 13,
+            "time": {"hour": 13, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "17"}
+        },
+        {
+            "name": "tridecimal 23:59",
+            "base": 13,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "1A", "minutes": "47"}
+        },
+
+        {
+            "name": "tetradecimal 0:00",
+            "base": 14,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "tetradecimal 5:20",
+            "base": 14,
+            "time": {"hour": 14, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "16"}
+        },
+        {
+            "name": "tetradecimal 23:59",
+            "base": 14,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "19", "minutes": "43"}
+        },
+
+        {
+            "name": "pentadecimal 0:00",
+            "base": 15,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "pentadecimal 5:20",
+            "base": 15,
+            "time": {"hour": 15, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "15"}
+        },
+        {
+            "name": "pentadecimal 23:59",
+            "base": 15,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "18", "minutes": "3E"}
+        },
+
+        {
+            "name": "hexadecimal 0:00",
+            "base": 16,
+            "time": {"hour": 0, "minutes": 0},
+            "expected": {"hour": " 0", "minutes": "00"}
+        },
+        {
+            "name": "hexadecimal 5:20",
+            "base": 16,
+            "time": {"hour": 16, "minutes": 20},
+            "expected": {"hour": "10", "minutes": "14"}
+        },
+        {
+            "name": "hexadecimal 23:59",
+            "base": 16,
+            "time": {"hour": 23, "minutes": 59},
+            "expected": {"hour": "17", "minutes": "3B"}
+        }
+
+    ]</jsonData>
+
+</resources>
