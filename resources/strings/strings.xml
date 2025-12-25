@@ -1,0 +1,66 @@
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <string id="AppName">BaseTime</string>
+    <string id="BaseTime">Time</string>
+
+    <string id="StandardTimeMenuTitle">Show Standard Time</string>
+
+    <string id="NumberSystemMenuTitle">Number System</string>
+    <string id="Binary">Binary (2)</string>
+    <string id="Ternary">Ternary (3)</string>
+    <string id="Quaternary">Quaternary (4)</string>
+    <string id="Quinary">Quinary (5)</string>
+    <string id="Senary">Senary (6)</string>
+    <string id="Septenary">Septenary (7)</string>
+    <string id="Octal">Octal (8)</string>
+    <string id="Nonary">Nonary (9)</string>
+    <string id="Decimal">Decimal (10/A)</string>
+    <string id="Undecimal">Undecimal (11/B)</string>
+    <string id="Duodecimal">Duodecimal (12/C)</string>
+    <string id="Tridecimal">Tridecimal (13/D)</string>
+    <string id="Tetradecimal">Tetradecimal (14/E)</string>
+    <string id="Pentadecimal">Pentadecimal (15/F)</string>
+    <string id="Hexadecimal">Hexadecimal (16/G)</string>
+
+    <jsonData id="NumberSystems">[
+        "Binary (2)",
+        "Ternary (3)",
+        "Quaternary (4)",
+        "Quinary (5)",
+        "Senary (6)",
+        "Septenary (7)",
+        "Octal (8)",
+        "Nonary (9)",
+        "Decimal (10/A)",
+        "Undecimal (11/B)",
+        "Duodecimal (12/C)",
+        "Tridecimal (13/D)",
+        "Tetradecimal (14/E)",
+        "Pentadecimal (15/F)",
+        "Hexadecimal (16/G)"
+    ]</jsonData>
+
+    <jsonData id="Digits">[
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+    ]</jsonData>
+    <string id="HourPadding"> </string>
+    <string id="MinutesPadding">0</string>
+
+</resources>
