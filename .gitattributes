@@ -16,3 +16,15 @@ resources/fonts/SUSEMono-Regular-50.png filter=lfs diff=lfs merge=lfs -text
 resources/fonts/SUSEMono-Bold-60.png filter=lfs diff=lfs merge=lfs -text
 resources/fonts/SUSEMono-Regular-60.png filter=lfs diff=lfs merge=lfs -text
 resources/graphics filter=lfs diff=lfs merge=lfs -text
+resources/graphics/base-hexadecimal-standard.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeCaptureBinary.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero[[:space:]]1.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero[[:space:]]2.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero[[:space:]]3.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero[[:space:]]5.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/base-binary-standard.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/base-binary.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/base-decimal.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeCaptureTernary.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero[[:space:]]4.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/BaseTimeHero.png filter=lfs diff=lfs merge=lfs -text

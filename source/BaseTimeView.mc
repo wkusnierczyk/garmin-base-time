@@ -36,15 +36,6 @@ class BaseTimeView extends WatchUi.WatchFace {
 
     }
 
-    function onHide() {
-    }
-
-    function onExitSleep() {
-    }
-
-    function onEnterSleep() {
-    }
-
     private function _drawBaseTime(dc as Graphics.Dc or Null, hour as Number, minutes as Number, seconds as Number) {
         var base = PropertyUtils.getPropertyElseDefault(NUMBER_SYSTEM_PROPERTY, NUMBER_SYSTEM_MODE_DEFAULT);
         if (base < 4) {
