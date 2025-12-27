@@ -6,6 +6,8 @@ A minimalist, elegant, typography-focused Garmin Connect IQ watch face that disp
 ![Base 6](resources/graphics/base-hexadecimal-standard.png)
 ![Base 2](resources/graphics/base-binary-standard.png)
 
+Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/0aa8216b-15a2-4fc1-9c7e-9b3731efb8e7).
+
 ## Contents
 
 * [Base n time](#base-n-time)
