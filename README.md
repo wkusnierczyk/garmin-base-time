@@ -12,6 +12,7 @@ Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps
 
 * [Base n time](#base-n-time)
 * [Project structure](#project-structure)
+* [Fonts](#fonts)
 * [Build, test, deploy](#build-test-deploy)
 
 ## Base n time
@@ -60,11 +61,6 @@ The alternatve of using the decimal system would lead to double-digit indicators
 The base can be selected in the user settings menu in the device.
 Optionally, the user may turn on standard time, displayed in smaller font below the decimal time, using on-watch customization settings.
 
-The watch face uses custom fonts.
-The font presented here is [SUSEMono](https://fonts.google.com/specimen/SUSE+Mono), available from [Google Fonts](https://fonts.google.com/) as a True Type font (`ttf`).
-It has been converted to a bitmap font (`bmp`, `fnt`) using the open source command-line [`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp) converter.
-The hours, minutes, and seconds are displayed with Ubuntu Bold, Medium, and Regular, respectively, size 70 pixels.
-
 ## Project structure
 
 ```bash
@@ -73,24 +69,28 @@ FrenchTime
 ├── Makefile                       # Convenience makefile
 ├── manifest.xml
 ├── monkey.jungle
-├── README.md
+├── README.md                      # This readme file
 ├── resources
 │   ├── drawables
 │   │   ├── drawables.xml
-│   │   └── launcher_icon.svg
+│   │   └── launcher_icon.svg      # Launcher icon
 │   ├── fonts
 │   │   ├── fonts.xml              # Font map 
 │   │   ├── [ttf, fnt, png fonts]  # Source (ttf) and converted (fnt, png) fonts
-│   │   └── OFL.txt                # Open font license
+│   │   └── OFL.txt, UFL.txt       # Font licenses
+│   ├── graphics
+│   │   └── *.png                  # Graphics (screenshots, screen captures, hero images)
 │   ├── layouts
 │   │   └── layout.xml             # Layout map (for standard time only)
-│   ├── settings                   # Properties (standard time toggle, number system)
+│   ├── settings                   # User settings
 │   │   ├── properties.xml         
 │   │   └── settings.xml
 │   ├── strings
 │   │   └── strings.xml            # i18n-ready (English version provided)
 │   └── tests
 │       └── base_time_tests.xml    # Data for unit tests
+├── resources-round-*              # Screen resolution-specific resources
+│   └── ...
 └── source
     ├── BaseTime.mc                # Time string calculation and formatting
     ├── BaseTimeApp.mc             # Application entry point
@@ -100,6 +100,34 @@ FrenchTime
     ├── BaseTimeView.mc            # Watch face geometry
     └── PropertyUtils.mc           # Utility functions for properties
 ```
+
+## Fonts
+
+The Base Time watch face uses custom fonts:
+
+* [SUSEMono](https://fonts.google.com/specimen/SUSE+Mono) for the Base-n time (hours and base indicators in SUSEMono-Bold, minutes in SUSEMono-Regular).
+* [Ubuntu](https://fonts.google.com/specimen/SUSE+Mono) for standard time (Ubuntu-Regular).
+
+The development process was as follows:
+
+* The fonts were downloaded from [Google Fonts](https://fonts.google.com/) as True Type  (`.ttf`) fonts.
+* The fonts were converted to bitmaps as `.fnt` and `.png` pairs using the open source command-line [`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp) converter.
+* The font sizes were established to match the Garmin Fenix 7X Solar watch 280x280 pixel screen resolution.
+* The fonts were then scaled proportionally to match other screen sizes available on Garmin watches with round screens using the included [utility script](utils/scale_fonts.py).
+
+The table below lists all font sizes provided for the supported screen resolutions.
+
+| Element | Font | 218 | 240 | 260 | 280 | 360 | 390 | 416 | 454 |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Single line hour | SUSEMono Bold | 47 | 51 | 56 | 60 | 77 | 84 | 89 | 97 |
+| Single line minutes | SUSEMono Regular | 47 | 51 | 56 | 60 | 77 | 84 | 89 | 97 |
+| Single line base indicator | SUSEMono Regular | 23 | 26 | 28 | 30 | 39 | 42 | 45 | 49 |
+| Double line hour | SUSEMono Bold | 39 | 43 | 46 | 50 | 64 | 70 | 74 | 81 |
+| Double line minutes | SUSEMono Regular | 39 | 43 | 46 | 50 | 64 | 70 | 74 | 81 |
+| Double line base indicator | SUSEMono Regular | 19 | 21 | 23 | 25 | 32 | 35 | 37 | 41 |
+| Standard time | Ubuntu Regular | 23 | 26 | 28 | 30 | 39 | 42 | 45 | 49 |
+
+
 
 ## Build, test, deploy
 
