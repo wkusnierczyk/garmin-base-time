@@ -1,11 +1,58 @@
 <resources>
+
     <fonts>
         <font id="SingleLineHourFont" filename="SUSEMono-Bold-60.fnt" antialias="true" />
         <font id="SingleLineMinutesFont" filename="SUSEMono-Regular-60.fnt" antialias="true" />
-        <font id="SingleLineSystemBaseFont" filename="SUSEMono-Regular-30.fnt" antialias="true" />
+        <font id="SingleLineSystemBaseFont" filename="SUSEMono-Bold-30.fnt" antialias="true" />
         <font id="DoubleLineHourFont" filename="SUSEMono-Bold-50.fnt" antialias="true" />
         <font id="DoubleLineMinutesFont" filename="SUSEMono-Regular-50.fnt" antialias="true" />
-        <font id="DoubleLineSystemBaseFont" filename="SUSEMono-Regular-25.fnt" antialias="true" />
+        <font id="DoubleLineSystemBaseFont" filename="SUSEMono-Bold-25.fnt" antialias="true" />
         <font id="StandardTimeFont" filename="Ubuntu-Regular-30.fnt" antialias="true" />
     </fonts>
+
+    <jsonData id="FontCharsets">[
+        {
+            "fontId": "SingleLineHourFont",
+            "fontCharset": "0123456789ABCDEF "
+        },
+        {
+            "fontId": "SingleLineMinutesFont",
+            "fontCharset": "0123456789ABCDEF "
+        },
+        {
+            "fontId": "SingleLineSystemBaseFont",
+            "fontCharset": "0123456789ABCDEFG"
+        },
+        {
+            "fontId": "DoubleLineHourFont",
+            "fontCharset": "0123456789ABCDEF "
+        },
+        {
+            "fontId": "DoubleLineMinutesFont",
+            "fontCharset": "0123456789ABCDEF "
+        },
+        {
+            "fontId": "DoubleLineSystemBaseFont",
+            "fontCharset": "0123456789ABCDEFG"
+        },
+        {
+            "fontId": "StandardTimeFont",
+            "fontCharset": "0123456789: "
+        }
+    ]</jsonData>
+
+    <jsonData id="ScreenDiameters">{
+        "referenceDiameter": 280,
+        "targetDiameters": [
+            218, 
+            240, 
+            260, 
+            280, 
+            360, 
+            390, 
+            416, 
+            454
+        ]
+    }</jsonData>
+
 </resources>

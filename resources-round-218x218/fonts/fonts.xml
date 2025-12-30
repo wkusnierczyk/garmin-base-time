@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <fonts>
+        <font id="SingleLineHourFont" filename="SUSEMono-Bold-47.fnt" antialias="true" />
+        <font id="SingleLineMinutesFont" filename="SUSEMono-Regular-47.fnt" antialias="true" />
+        <font id="SingleLineSystemBaseFont" filename="SUSEMono-Bold-23.fnt" antialias="true" />
+        <font id="DoubleLineHourFont" filename="SUSEMono-Bold-39.fnt" antialias="true" />
+        <font id="DoubleLineMinutesFont" filename="SUSEMono-Regular-39.fnt" antialias="true" />
+        <font id="DoubleLineSystemBaseFont" filename="SUSEMono-Bold-19.fnt" antialias="true" />
+        <font id="StandardTimeFont" filename="Ubuntu-Regular-23.fnt" antialias="true" />
+    </fonts>
+
+    </resources>
