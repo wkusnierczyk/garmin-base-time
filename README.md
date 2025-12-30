@@ -117,16 +117,15 @@ The development process was as follows:
 
 The table below lists all font sizes provided for the supported screen resolutions.
 
-| Element | Font | 218 | 240 | 260 | 280 | 360 | 390 | 416 | 454 |
-| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Single line hour | SUSEMono Bold | 47 | 51 | 56 | 60 | 77 | 84 | 89 | 97 |
-| Single line minutes | SUSEMono Regular | 47 | 51 | 56 | 60 | 77 | 84 | 89 | 97 |
-| Single line base indicator | SUSEMono Regular | 23 | 26 | 28 | 30 | 39 | 42 | 45 | 49 |
-| Double line hour | SUSEMono Bold | 39 | 43 | 46 | 50 | 64 | 70 | 74 | 81 |
-| Double line minutes | SUSEMono Regular | 39 | 43 | 46 | 50 | 64 | 70 | 74 | 81 |
-| Double line base indicator | SUSEMono Regular | 19 | 21 | 23 | 25 | 32 | 35 | 37 | 41 |
-| Standard time | Ubuntu Regular | 23 | 26 | 28 | 30 | 39 | 42 | 45 | 49 |
-
+| Element                 | Font             | 218 | 240 | 260 | 280 | 360 | 390 | 416 | 454 |
+| :---------------------- | :--------------- | --: | --: | --: | --: | --: | --: | --: | --: |
+| Single line hour        | SUSEMono bold    |  47 |  51 |  56 |  60 |  77 |  84 |  89 |  97 |
+| Single line minutes     | SUSEMono regular |  47 |  51 |  56 |  60 |  77 |  84 |  89 |  97 |
+| Single line system base | SUSEMono bold    |  23 |  26 |  28 |  30 |  39 |  42 |  45 |  49 |
+| Double line hour        | SUSEMono bold    |  39 |  43 |  46 |  50 |  64 |  70 |  74 |  81 |
+| Double line minutes     | SUSEMono regular |  39 |  43 |  46 |  50 |  64 |  70 |  74 |  81 |
+| Double line system base | SUSEMono bold    |  19 |  21 |  23 |  25 |  32 |  35 |  37 |  41 |
+| Standard time           | Ubuntu regular   |  23 |  26 |  28 |  30 |  39 |  42 |  45 |  49 |
 
 
 ## Build, test, deploy
