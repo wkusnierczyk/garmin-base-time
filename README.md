@@ -1,16 +1,24 @@
 # Garmin Base Time
 
-A minimalist, elegant, typography-focused Garmin Connect IQ watch face that displays the current time using base $n$ ($n = 2..16$) numerals.
+A minimalist, elegant, nerdy, typography-focused Garmin Connect IQ watch face that displays the current time using base $n$ ($n = 2..16$) numerals.
 
-![Base 10](resources/graphics/base-decimal.png)
-![Base 6](resources/graphics/base-hexadecimal-standard.png)
-![Base 2](resources/graphics/base-binary-standard.png)
+![Base Time](resources/graphics/BaseTimeHero-small.png)
 
-Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/0aa8216b-15a2-4fc1-9c7e-9b3731efb8e7).
+Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/0aa8216b-15a2-4fc1-9c7e-9b3731efb8e7) or through the Connect IQ mobile app.
+
+> **Note**  
+> Swatch Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
+> It is shared _as is_ as an open source project, with no commitment to long term maintenance and further feature development.
+>
+> Please use [issues](https://github.com/wkusnierczyk/garmin-swatch-time/issues) to provide bug reports or feature requests.  
+> Please use [discussions](https://github.com/wkusnierczyk/garmin-swatch-time/discussions) for any other comments.
+>
+> All feedback is wholeheartedly welcome.
 
 ## Contents
 
 * [Base n time](#base-n-time)
+* [Features](#features)
 * [Fonts](#fonts)
 * [Build, test, deploy](#build-test-deploy)
 
@@ -61,6 +69,16 @@ The base can be selected in the user settings menu in the device.
 Optionally, the user may turn on standard time, displayed in smaller font below the decimal time, using on-watch customization settings.
 
 
+## Features
+
+The Base-n Time watch face supports the following features:
+
+|Screenshot|Description|
+|-|:-|
+|![](resources/graphics/base-decimal.png)|**Decimal time**<br /> The current time as decimal numerals, with the suffix `A` (unidecimal for 'ten') indicating the base-10 (decimal) number system. The time is displayed in a single line, with hour digits in white bold font, and minutes digits in light gray regular font.|
+|![](resources/graphics/base-binary.png)|**Binary time**<br /> Time in base-n with n = 2, 3. The time is displayed as hour digits in white bold font in one line, and minutes digits in light gray regular font in the next line. The base can be changed by the user with a setting in the Customize menu on the device.|
+|![](resources/graphics/base-hexadecimal-standard.png)|**Standard time**<br /> The standard time is optionally displayed in smaller light gray font beneath the base-n time; here, hexadecimal, with `G` being sixteen in the heptadecimal (base 17) number system. The standard time can be toggled on and of by the user with a setting in the Cutomize menu on the device.<br />Time in base-n with n = 4..16 is displayed in a single line, as in Decimal time above.|
+
 ## Fonts
 
 The Base Time watch face uses custom fonts:
@@ -68,12 +86,18 @@ The Base Time watch face uses custom fonts:
 * [SUSEMono](https://fonts.google.com/specimen/SUSE+Mono) for the Base-n time (hours and base indicators in SUSEMono-Bold, minutes in SUSEMono-Regular).
 * [Ubuntu](https://fonts.google.com/specimen/SUSE+Mono) for standard time (Ubuntu-Regular).
 
-The development process was as follows:
+> The development of Garmin watch faces motivated the implementation of two useful tools:
+> * A TTF to FNT+PNG converter ([`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp)).  
+> Garmin watches use non-scalable fixed-size bitmap fonts, and cannot handle variable size True Type fonts directly.
+> * An font scaler automation tool ([`garmin-font-scaler`](https://github.com/wkusnierczyk/garmin-font-scaler)).  
+> Garmin watches come in a variety of shapes and resolutions, and bitmap fonts need to be scaled for each device proportionally to its resolution.
+
+The font development proceeded as follows:
 
 * The fonts were downloaded from [Google Fonts](https://fonts.google.com/) as True Type  (`.ttf`) fonts.
 * The fonts were converted to bitmaps as `.fnt` and `.png` pairs using the open source command-line [`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp) converter.
 * The font sizes were established to match the Garmin Fenix 7X Solar watch 280x280 pixel screen resolution.
-* The fonts were then scaled proportionally to match other screen sizes available on Garmin watches with round screens using the included [utility script](utils/scale_fonts.py).
+* The fonts were then scaled proportionally to match other screen sizes available on Garmin watches using the [`garmin-font-scaler`](https://github.com/wkusnierczyk/garmin-font-scaler) tool.
 
 The table below lists all font sizes provided for the supported screen resolutions.
 
@@ -195,11 +219,14 @@ You can use the included `Makefile` to conveniently trigger some of the actions 
 # build binaries from sources
 make build
 
-# run unit tests
+# run unit tests -- note: requires the simulator to be running
 make test
 
 # run the simulation
 make run
+
+# clean up the project directory
+make clean
 ```
 
 To sideload your application to your Garmin watch, see [developer.garmin.com/connect-iq/connect-iq-basics/your-first-app](https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/).
