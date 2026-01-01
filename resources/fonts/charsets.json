@@ -1,0 +1,30 @@
+[
+    {
+        "fontCharset": "0123456789ABCDEF ",
+        "fontId": "SingleLineHourFont"
+    },
+    {
+        "fontCharset": "0123456789ABCDEF ",
+        "fontId": "SingleLineMinutesFont"
+    },
+    {
+        "fontCharset": "0123456789ABCDEFG",
+        "fontId": "SingleLineSystemBaseFont"
+    },
+    {
+        "fontCharset": "0123456789ABCDEF ",
+        "fontId": "DoubleLineHourFont"
+    },
+    {
+        "fontCharset": "0123456789ABCDEF ",
+        "fontId": "DoubleLineMinutesFont"
+    },
+    {
+        "fontCharset": "0123456789ABCDEFG",
+        "fontId": "DoubleLineSystemBaseFont"
+    },
+    {
+        "fontCharset": "0123456789: ",
+        "fontId": "StandardTimeFont"
+    }
+]

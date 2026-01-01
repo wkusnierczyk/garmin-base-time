@@ -11,7 +11,6 @@ Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps
 ## Contents
 
 * [Base n time](#base-n-time)
-* [Project structure](#project-structure)
 * [Fonts](#fonts)
 * [Build, test, deploy](#build-test-deploy)
 
@@ -61,45 +60,6 @@ The alternatve of using the decimal system would lead to double-digit indicators
 The base can be selected in the user settings menu in the device.
 Optionally, the user may turn on standard time, displayed in smaller font below the decimal time, using on-watch customization settings.
 
-## Project structure
-
-```bash
-FrenchTime
-├── LICENSE                        # MIT license
-├── Makefile                       # Convenience makefile
-├── manifest.xml
-├── monkey.jungle
-├── README.md                      # This readme file
-├── resources
-│   ├── drawables
-│   │   ├── drawables.xml
-│   │   └── launcher_icon.svg      # Launcher icon
-│   ├── fonts
-│   │   ├── fonts.xml              # Font map 
-│   │   ├── [ttf, fnt, png fonts]  # Source (ttf) and converted (fnt, png) fonts
-│   │   └── OFL.txt, UFL.txt       # Font licenses
-│   ├── graphics
-│   │   └── *.png                  # Graphics (screenshots, screen captures, hero images)
-│   ├── layouts
-│   │   └── layout.xml             # Layout map (for standard time only)
-│   ├── settings                   # User settings
-│   │   ├── properties.xml         
-│   │   └── settings.xml
-│   ├── strings
-│   │   └── strings.xml            # i18n-ready (English version provided)
-│   └── tests
-│       └── base_time_tests.xml    # Data for unit tests
-├── resources-round-*              # Screen resolution-specific resources
-│   └── ...
-└── source
-    ├── BaseTime.mc                # Time string calculation and formatting
-    ├── BaseTimeApp.mc             # Application entry point
-    ├── BaseTimeConstants.mc       # Constants used throughout the sources
-    ├── BaseTimeSettings.mc        # User settings menu
-    ├── BaseTimeTests.mc           # Unit tests
-    ├── BaseTimeView.mc            # Watch face geometry
-    └── PropertyUtils.mc           # Utility functions for properties
-```
 
 ## Fonts
 
@@ -117,15 +77,107 @@ The development process was as follows:
 
 The table below lists all font sizes provided for the supported screen resolutions.
 
-| Element                 | Font             | 218 | 240 | 260 | 280 | 360 | 390 | 416 | 454 |
-| :---------------------- | :--------------- | --: | --: | --: | --: | --: | --: | --: | --: |
-| Single line hour        | SUSEMono bold    |  47 |  51 |  56 |  60 |  77 |  84 |  89 |  97 |
-| Single line minutes     | SUSEMono regular |  47 |  51 |  56 |  60 |  77 |  84 |  89 |  97 |
-| Single line system base | SUSEMono bold    |  23 |  26 |  28 |  30 |  39 |  42 |  45 |  49 |
-| Double line hour        | SUSEMono bold    |  39 |  43 |  46 |  50 |  64 |  70 |  74 |  81 |
-| Double line minutes     | SUSEMono regular |  39 |  43 |  46 |  50 |  64 |  70 |  74 |  81 |
-| Double line system base | SUSEMono bold    |  19 |  21 |  23 |  25 |  32 |  35 |  37 |  41 |
-| Standard time           | Ubuntu regular   |  23 |  26 |  28 |  30 |  39 |  42 |  45 |  49 |
+
+| Resolution |    Shape     |         Element         |       Font       | Size |
+| ---------: | :----------- | :---------------------- | :--------------- | ---: |
+|  148 x 205 | rectangle    | Double line hour        | SUSEMono bold    |   26 |
+|  148 x 205 | rectangle    | Double line minutes     | SUSEMono regular |   26 |
+|  148 x 205 | rectangle    | Double line system base | SUSEMono bold    |   13 |
+|  148 x 205 | rectangle    | Single line hour        | SUSEMono bold    |   32 |
+|  148 x 205 | rectangle    | Single line minutes     | SUSEMono regular |   32 |
+|  148 x 205 | rectangle    | Single line system base | SUSEMono bold    |   16 |
+|  148 x 205 | rectangle    | Standard time           | Ubuntu regular   |   16 |
+|  176 x 176 | semi-octagon | Double line hour        | SUSEMono bold    |   31 |
+|  176 x 176 | semi-octagon | Double line minutes     | SUSEMono regular |   31 |
+|  176 x 176 | semi-octagon | Double line system base | SUSEMono bold    |   16 |
+|  176 x 176 | semi-octagon | Single line hour        | SUSEMono bold    |   38 |
+|  176 x 176 | semi-octagon | Single line minutes     | SUSEMono regular |   38 |
+|  176 x 176 | semi-octagon | Single line system base | SUSEMono bold    |   19 |
+|  176 x 176 | semi-octagon | Standard time           | Ubuntu regular   |   19 |
+|  215 x 180 | semi-round   | Double line hour        | SUSEMono bold    |   32 |
+|  215 x 180 | semi-round   | Double line minutes     | SUSEMono regular |   32 |
+|  215 x 180 | semi-round   | Double line system base | SUSEMono bold    |   16 |
+|  215 x 180 | semi-round   | Single line hour        | SUSEMono bold    |   39 |
+|  215 x 180 | semi-round   | Single line minutes     | SUSEMono regular |   39 |
+|  215 x 180 | semi-round   | Single line system base | SUSEMono bold    |   19 |
+|  215 x 180 | semi-round   | Standard time           | Ubuntu regular   |   19 |
+|  218 x 218 | round        | Double line hour        | SUSEMono bold    |   39 |
+|  218 x 218 | round        | Double line minutes     | SUSEMono regular |   39 |
+|  218 x 218 | round        | Double line system base | SUSEMono bold    |   19 |
+|  218 x 218 | round        | Single line hour        | SUSEMono bold    |   47 |
+|  218 x 218 | round        | Single line minutes     | SUSEMono regular |   47 |
+|  218 x 218 | round        | Single line system base | SUSEMono bold    |   23 |
+|  218 x 218 | round        | Standard time           | Ubuntu regular   |   23 |
+|  240 x 240 | round        | Double line hour        | SUSEMono bold    |   43 |
+|  240 x 240 | rectangle    | Double line hour        | SUSEMono bold    |   43 |
+|  240 x 240 | round        | Double line minutes     | SUSEMono regular |   43 |
+|  240 x 240 | rectangle    | Double line minutes     | SUSEMono regular |   43 |
+|  240 x 240 | round        | Double line system base | SUSEMono bold    |   21 |
+|  240 x 240 | rectangle    | Double line system base | SUSEMono bold    |   21 |
+|  240 x 240 | round        | Single line hour        | SUSEMono bold    |   51 |
+|  240 x 240 | rectangle    | Single line hour        | SUSEMono bold    |   51 |
+|  240 x 240 | round        | Single line minutes     | SUSEMono regular |   51 |
+|  240 x 240 | rectangle    | Single line minutes     | SUSEMono regular |   51 |
+|  240 x 240 | round        | Single line system base | SUSEMono bold    |   26 |
+|  240 x 240 | rectangle    | Single line system base | SUSEMono bold    |   26 |
+|  240 x 240 | round        | Standard time           | Ubuntu regular   |   26 |
+|  240 x 240 | rectangle    | Standard time           | Ubuntu regular   |   26 |
+|  260 x 260 | round        | Double line hour        | SUSEMono bold    |   46 |
+|  260 x 260 | round        | Double line minutes     | SUSEMono regular |   46 |
+|  260 x 260 | round        | Double line system base | SUSEMono bold    |   23 |
+|  260 x 260 | round        | Single line hour        | SUSEMono bold    |   56 |
+|  260 x 260 | round        | Single line minutes     | SUSEMono regular |   56 |
+|  260 x 260 | round        | Single line system base | SUSEMono bold    |   28 |
+|  260 x 260 | round        | Standard time           | Ubuntu regular   |   28 |
+|  280 x 280 | round        | Double line hour        | SUSEMono bold    |   50 |
+|  280 x 280 | round        | Double line hour        | SUSEMono bold    |   50 |
+|  280 x 280 | round        | Double line minutes     | SUSEMono regular |   50 |
+|  280 x 280 | round        | Double line minutes     | SUSEMono regular |   50 |
+|  280 x 280 | round        | Double line system base | SUSEMono bold    |   25 |
+|  280 x 280 | round        | Double line system base | SUSEMono bold    |   25 |
+|  280 x 280 | round        | Single line hour        | SUSEMono bold    |   60 |
+|  280 x 280 | round        | Single line hour        | SUSEMono bold    |   60 |
+|  280 x 280 | round        | Single line minutes     | SUSEMono regular |   60 |
+|  280 x 280 | round        | Single line minutes     | SUSEMono regular |   60 |
+|  280 x 280 | round        | Single line system base | SUSEMono bold    |   30 |
+|  280 x 280 | round        | Single line system base | SUSEMono bold    |   30 |
+|  280 x 280 | round        | Standard time           | Ubuntu regular   |   30 |
+|  280 x 280 | round        | Standard time           | Ubuntu regular   |   30 |
+|  320 x 360 | rectangle    | Double line hour        | SUSEMono bold    |   57 |
+|  320 x 360 | rectangle    | Double line minutes     | SUSEMono regular |   57 |
+|  320 x 360 | rectangle    | Double line system base | SUSEMono bold    |   29 |
+|  320 x 360 | rectangle    | Single line hour        | SUSEMono bold    |   69 |
+|  320 x 360 | rectangle    | Single line minutes     | SUSEMono regular |   69 |
+|  320 x 360 | rectangle    | Single line system base | SUSEMono bold    |   34 |
+|  320 x 360 | rectangle    | Standard time           | Ubuntu regular   |   34 |
+|  360 x 360 | round        | Double line hour        | SUSEMono bold    |   64 |
+|  360 x 360 | round        | Double line minutes     | SUSEMono regular |   64 |
+|  360 x 360 | round        | Double line system base | SUSEMono bold    |   32 |
+|  360 x 360 | round        | Single line hour        | SUSEMono bold    |   77 |
+|  360 x 360 | round        | Single line minutes     | SUSEMono regular |   77 |
+|  360 x 360 | round        | Single line system base | SUSEMono bold    |   39 |
+|  360 x 360 | round        | Standard time           | Ubuntu regular   |   39 |
+|  390 x 390 | round        | Double line hour        | SUSEMono bold    |   70 |
+|  390 x 390 | round        | Double line minutes     | SUSEMono regular |   70 |
+|  390 x 390 | round        | Double line system base | SUSEMono bold    |   35 |
+|  390 x 390 | round        | Single line hour        | SUSEMono bold    |   84 |
+|  390 x 390 | round        | Single line minutes     | SUSEMono regular |   84 |
+|  390 x 390 | round        | Single line system base | SUSEMono bold    |   42 |
+|  390 x 390 | round        | Standard time           | Ubuntu regular   |   42 |
+|  416 x 416 | round        | Double line hour        | SUSEMono bold    |   74 |
+|  416 x 416 | round        | Double line minutes     | SUSEMono regular |   74 |
+|  416 x 416 | round        | Double line system base | SUSEMono bold    |   37 |
+|  416 x 416 | round        | Single line hour        | SUSEMono bold    |   89 |
+|  416 x 416 | round        | Single line minutes     | SUSEMono regular |   89 |
+|  416 x 416 | round        | Single line system base | SUSEMono bold    |   45 |
+|  416 x 416 | round        | Standard time           | Ubuntu regular   |   45 |
+|  454 x 454 | round        | Double line hour        | SUSEMono bold    |   81 |
+|  454 x 454 | round        | Double line minutes     | SUSEMono regular |   81 |
+|  454 x 454 | round        | Double line system base | SUSEMono bold    |   41 |
+|  454 x 454 | round        | Single line hour        | SUSEMono bold    |   97 |
+|  454 x 454 | round        | Single line minutes     | SUSEMono regular |   97 |
+|  454 x 454 | round        | Single line system base | SUSEMono bold    |   49 |
+|  454 x 454 | round        | Standard time           | Ubuntu regular   |   49 |
 
 
 ## Build, test, deploy
