@@ -10,8 +10,8 @@ Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps
 > Swatch Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
 > It is shared _as is_ as an open source project, with no commitment to long term maintenance and further feature development.
 >
-> Please use [issues](https://github.com/wkusnierczyk/garmin-swatch-time/issues) to provide bug reports or feature requests.  
-> Please use [discussions](https://github.com/wkusnierczyk/garmin-swatch-time/discussions) for any other comments.
+> Please use [issues](https://github.com/wkusnierczyk/garmin-base-time/issues) to provide bug reports or feature requests.  
+> Please use [discussions](https://github.com/wkusnierczyk/garmin-base-time/discussions) for any other comments.
 >
 > All feedback is wholeheartedly welcome.
 
