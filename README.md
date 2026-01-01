@@ -7,7 +7,7 @@ A minimalist, elegant, nerdy, typography-focused Garmin Connect IQ watch face th
 Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/0aa8216b-15a2-4fc1-9c7e-9b3731efb8e7) or through the Connect IQ mobile app.
 
 > **Note**  
-> Swatch Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
+> Base Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
 > It is shared _as is_ as an open source project, with no commitment to long term maintenance and further feature development.
 >
 > Please use [issues](https://github.com/wkusnierczyk/garmin-base-time/issues) to provide bug reports or feature requests.  
@@ -71,7 +71,7 @@ Optionally, the user may turn on standard time, displayed in smaller font below 
 
 ## Features
 
-The Base-n Time watch face supports the following features:
+The Base Time watch face supports the following features:
 
 |Screenshot|Description|
 |-|:-|
