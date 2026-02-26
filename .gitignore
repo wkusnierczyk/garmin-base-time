@@ -30,5 +30,8 @@ test_build-settings.json
 .DS_Store
 Thumbs.db
 
+# Development logs
+.dev/
+
 # Developer Key (CRITICAL: Never commit this)
 developer_key.der
